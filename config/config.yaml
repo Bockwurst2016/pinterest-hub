@@ -1,0 +1,44 @@
+# Global Settings
+db_path: "data/pipeline.db"
+log_level: "INFO"
+
+# Model Settings
+ollama:
+  model: "llama3"
+  base_url: "http://localhost:11434"
+
+comfyui:
+  base_url: "http://127.0.0.1:8188"
+  proxy_connect: false
+  # Paths to your specific Flux.1 GGUF models
+  flux_models:
+    checkpoint: "models/flux1-dev-Q4_K_S.gguf"
+    vae: "models/ae.safetensors"
+    clip: "models/clip_l.safetensors"
+
+# Branding Assets
+branding:
+  logo_path: "data/assets/logo.png"
+  watermark_path: "data/assets/watermark.png"
+  default_overlay_text: "Exclusive Find"
+
+# Pinterest Credentials
+pinterest:
+  api_key: "YOUR_API_KEY"
+  secret_key: "YOUR_SECRET_KEY"
+  board_ids:
+    - "BOARD_ID_1"
+    - "BOARD_ID_2"
+
+# Initial Niches (Example)
+niches:
+  - name: "Cozy Home Decor"
+    prompt_modifiers:
+      tone: "warm, inviting, aesthetic"
+      style: "scandinavian, minimalist"
+    audience: "homeowners, interior designers"
+  - name: "Tech Gadgets"
+    prompt_modifiers:
+      tone: "sleek, professional, innovative"
+      style: "cyberpunk, high-tech"
+    audience: "early adopters, tech enthusiasts"
